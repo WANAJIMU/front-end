@@ -6,21 +6,6 @@ import { Button, Img, List, Text } from "components";
 import Header from "components/Header";
 
 const UploadPage = () => {
-  const fileInputRef = useRef(null);
-
-  const handleButtonClick = () => {
-    // Trigger the file input click
-    fileInputRef.current.click();
-  };
-
-  const handleFileChange = (e) => {
-    // Handle the selected file
-    const selectedFile = e.target.files[0];
-    if (selectedFile) {
-      // You can perform further actions with the selected file
-      console.log('Selected file:', selectedFile);
-    }
-  };
   const navigate = useNavigate();
 
   return (
@@ -150,23 +135,15 @@ const UploadPage = () => {
               </div>
             </List>
             <div className="flex flex-col items-center justify-start md:ml-[0] ml-[219px] mt-[27px] w-[56%] md:w-full">
-            <div>
-      <input
-        type="file"
-        style={{ display: 'none' }}
-        ref={fileInputRef}
-        onChange={handleFileChange}
-      />
-      <Button
-        className="common-pointer cursor-pointer font-bold h-[45px] rounded text-center text-sm uppercase w-[445px]"
-        onClick={handleButtonClick}
-        color="blue_gray_700"
-        size="md"
-        variant="fill"
-      >
-        Upload Files
-      </Button>
-    </div>
+              <Button
+                className="common-pointer cursor-pointer font-bold h-[45px] rounded text-center text-sm uppercase w-[445px]"
+                onClick={() => navigate("/bankingdetails")}
+                color="blue_gray_700"
+                size="md"
+                variant="fill"
+              >
+                Upload Files
+              </Button>
             </div>
           </div>
         </div>

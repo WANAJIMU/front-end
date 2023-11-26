@@ -140,7 +140,7 @@ const BankingDetailsPage = () => {
           <div className="flex justify-end mt-6">
           <div className="flex justify-end mt-6">
         {/* Use Link to navigate to the specified URL */}
-        <Link to="/bankingdetails">
+        <Link to="/particularsofexistingloan">
           <button
             className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-green-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
             onClick={handleNextClick} // Optional: Add click handler for additional logic
