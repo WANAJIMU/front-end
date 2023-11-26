@@ -44,7 +44,7 @@ const HomepagePage = () => {
             </Button>
           </div>
           <Img
-            className="absolute h-[420px] inset-y-[0] my-auto right-[23%] w-[644px]"
+            className="absolute h-[400px] inset-y-[0] my-auto right-[15%] w-[420px]"
             src="images/img_illustartion.svg"
             alt="illustartion"
           />
