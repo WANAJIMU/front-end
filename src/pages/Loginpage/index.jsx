@@ -1,10 +1,17 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Button, Img, Input, Text } from "components";
 import SignUpPageColumnlabelTwo from "components/SignUpPageColumnlabelTwo";
 import SignUpPageColumnplay from "components/SignUpPageColumnplay";
 
 const LoginpagePage = () => {
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    // Redirect the user to the Signup page
+    navigate("/Signuppage");
+  };
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-poppins items-start justify-start mx-auto w-auto sm:w-full md:w-full">
@@ -26,15 +33,16 @@ const LoginpagePage = () => {
                     <Text
                       className="text-base text-gray-700_01 underline w-auto"
                       size="txtPoppinsRegular16"
+                      onClick={handleSignUpClick}
                     >
                       <span className="text-blue_gray-900_03 font-poppins text-left font-normal">
-                        Dont have an account?
+                        Don't have an account?
                       </span>
                       <span className="text-gray-700_01 font-poppins text-left font-normal">
                         {" "}
                       </span>
                       <span className="text-gray-900_01 font-poppins text-left font-normal">
-                        sign up{" "}
+                        Sign up
                       </span>
                     </Text>
                   </div>
