@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Img, Input, Text } from "components";
 import SignUpPageColumnlabelTwo from "components/SignUpPageColumnlabelTwo";
 import SignUpPageColumnplay from "components/SignUpPageColumnplay";
+import Header from "components/Header";
 
 const LoginpagePage = () => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const LoginpagePage = () => {
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-poppins items-start justify-start mx-auto w-auto sm:w-full md:w-full">
+      <Header className="bg-white-A700 flex md:flex-col md:gap-12 h-[72px] md:h-auto items-center justify-between md:px-5 px-[98px] py-[9px] w-full" />
         <div className="bg-white-A700 flex flex-col items-center justify-start w-full">
           <div
             className="bg-cover bg-gray-200 bg-no-repeat flex flex-col h-[1024px] items-center justify-start w-full"
