@@ -1,11 +1,14 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 import { Button, Img, List, Text } from "components";
 import Header from "components/Header";
 
 const UploadPage = () => {
+  const handleNextClick = () => {
+    // Add any logic or state changes you need before navigating
+    // (e.g., form validation or data processing)
+  };
   const navigate = useNavigate();
 
   return (
@@ -136,7 +139,7 @@ const UploadPage = () => {
             </List>
             <div className="flex flex-col items-center justify-start md:ml-[0] ml-[219px] mt-[27px] w-[56%] md:w-full">
               <Button
-                className="common-pointer cursor-pointer font-bold h-[45px] rounded text-center text-sm uppercase w-[445px]"
+                className="common-pointer cursor-pointer font-bold h-[45px] rounded text-center text-sm uppercase w-[445px] mb-5"
                 onClick={() => navigate("/bankingdetails")}
                 color="blue_gray_700"
                 size="md"
@@ -144,6 +147,14 @@ const UploadPage = () => {
               >
                 Upload Files
               </Button>
+              <Link to="/applicationsucces">
+                <button
+                  className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-green-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+                  onClick={handleNextClick} // Optional: Add click handler for additional logic
+                >
+                  Finish
+                </button>
+              </Link>
             </div>
           </div>
         </div>

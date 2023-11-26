@@ -7,6 +7,7 @@ const ParticularsofexistingloanPage = () => {
     // Add any logic or state changes you need before navigating
     // (e.g., form validation or data processing)
   };
+  
   return (
     <>
       <Header className="bg-white-A700 flex md:flex-col md:gap-12 h-[72px] md:h-auto items-center justify-between md:px-5 px-[98px] py-[9px] w-full" />
