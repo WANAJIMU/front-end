@@ -1,10 +1,17 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Button, Img, Input, Text } from "components";
 import SignUpPageColumnlabelTwo from "components/SignUpPageColumnlabelTwo";
 import SignUpPageColumnplay from "components/SignUpPageColumnplay";
 
 const SignuppagePage = () => {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    // Redirect the user to the Login page
+    navigate("/Loginpage");
+  };
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-poppins items-start justify-start mx-auto w-auto sm:w-full md:w-full">
@@ -24,8 +31,9 @@ const SignuppagePage = () => {
                   </Text>
                   <div className="flex flex-col items-start justify-start p-0.5 w-auto">
                     <Text
-                      className="text-base text-gray-700_01 underline w-auto"
+                      className="text-base text-gray-700_01 underline w-auto cursor-pointer"
                       size="txtPoppinsRegular16"
+                      onClick={handleLoginClick}
                     >
                       <span className="text-blue_gray-900_03 font-poppins text-left font-normal">
                         Already have an account?

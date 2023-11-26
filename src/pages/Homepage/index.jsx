@@ -1,12 +1,15 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
-
 import { Button, Img, Input, Line, Text } from "components";
 import Header from "components/Header";
 
 const HomepagePage = () => {
   const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    // Redirect the user to the Signup page
+    navigate('/Signuppage');
+  };
 
   return (
     <>
@@ -35,6 +38,7 @@ const HomepagePage = () => {
               color="blue_gray_700"
               size="md"
               variant="outline"
+              onClick={handleButtonClick}
             >
               Get started
             </Button>
